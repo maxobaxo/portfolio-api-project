@@ -8,7 +8,7 @@ export default (state = {}, action) => {
       }
       return newState;
     case 'RECEIVE_USER_INFO':
-      newState = Object.assign({}, state, {
+      newState = Object.assign({}, state, action.profile, {
         isFetching: false
       });
       return newState;

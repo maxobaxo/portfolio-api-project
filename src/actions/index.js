@@ -9,8 +9,9 @@ export const requestUserInfo = (localUserId) => ({
   localId: localUserId
 })
 
-export const receiveUserInfo = () => ({
-  type: c.RECEIVE_USER_INFO
+export const receiveUserInfo = (profile) => ({
+  type: c.RECEIVE_USER_INFO,
+  profile
 })
 
 let encodedKeys = base64.encode(username + ':' + token);
@@ -30,7 +31,7 @@ export function getUserInfo(dispatch) {
       error => console.log('An error occured', error)
     ).then(function(json) {
       console.log(json);
-      dispatch(receiveUserInfo());
+      dispatch(receiveUserInfo(json));
     });
   }
 }
