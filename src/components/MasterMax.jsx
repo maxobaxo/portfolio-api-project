@@ -2,6 +2,7 @@ import React from 'react';
 import UserInfo from './UserInfo';
 import RepoList from './RepoList';
 import { getUserInfo } from './../actions/user-info';
+import { getUserRepos } from './../actions/repos';
 import { connect } from 'react-redux';
 
 class MasterMax extends React.Component {
@@ -9,6 +10,7 @@ class MasterMax extends React.Component {
   constructor(props) {
     super(props);
     this.getMaxInfo = this.getMaxInfo.bind(this);
+    this.getMaxRepos = this.getMaxRepos.bind(this);
   }
 
   hideProfileButton() {
@@ -19,16 +21,32 @@ class MasterMax extends React.Component {
     }
   }
 
+  showProfileInfo() {
+    if (this.props.masterState.userInfo.bio) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
   getMaxInfo() {
     const { dispatch } = this.props;
     dispatch(getUserInfo());
+  }
+
+  getMaxRepos() {
+    const { dispatch } = this.props;
+    dispatch(getUserRepos());
   }
 
   render() {
     return(
       <div>
         <h2 hidden={this.hideProfileButton()} onClick={this.getMaxInfo}>cLiCk tO lOaD</h2>
-        <UserInfo profile={this.props.masterState.userInfo}/>
+        <div hidden={this.showProfileInfo()}>
+          <UserInfo profile={this.props.masterState.userInfo}/>
+        </div>
+        <RepoList />
       </div>
     )
   }
