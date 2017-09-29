@@ -18,7 +18,7 @@ export const receiveUserRepos = (json) => ({
 export function getUserRepos(dispatch) {
   return function(dispatch) {
     dispatch(requestUserRepos());
-    return fetch('https://api.github.com/users/maxobaxo/repos', {
+    return fetch('https://api.github.com/users/maxobaxo/repos?sort=updated&direction=desc&per_page=100', {
       headers: new Headers({
         'Authorization': 'Basic ' + encodedKeys,
         'Accept': 'application/vnd.github.v3+json'
