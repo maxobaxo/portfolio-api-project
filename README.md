@@ -1,5 +1,5 @@
 # Max Scher Portfolio
-#### _Epicodus Advanced Topics In React: Week 4 Independent Project, September 29, 2017_
+#### _Epicodus Code Review: Portfolio created with GitHub API, 09.29.17_
 _**By Max Scher**_
 
 ## Description

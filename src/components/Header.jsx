@@ -8,7 +8,7 @@ function Header() {
     <div>
       <Jumbotron>
         <h1>[ Max Scher: Web Development Portfolio ]</h1>
-        <Link to='/contact'>Contact</Link> | <Link to='/'>Profile</Link>
+        <Link to='/contact'>[ Contact ] </Link>  <Link to='/'>[ Profile ]</Link>
       </Jumbotron>
     </div>
   )
