@@ -1,6 +1,6 @@
 import React from 'react';
 
-function UserinfoGet(props) {
+function UserInfoGet(props) {
 
   return(
     <div>

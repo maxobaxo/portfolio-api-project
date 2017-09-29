@@ -1,7 +1,10 @@
 import React from 'react';
 import UserInfo from './UserInfo';
+import {getUserInfo} from './../actions';
 
 function App(props) {
+
+  getUserInfo();
 
   return(
     <div>
