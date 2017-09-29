@@ -1,12 +1,18 @@
 import React from 'react';
+import Header from './Header';
 import UserInfo from './UserInfo';
+import RepoList from './RepoList';
+import { Switch, Route } from 'react-router-dom';
 
 function App(props) {
 
   return(
     <div>
-      <h1>Max Scher: Web Development Portfolio</h1>
-      <UserInfo />
+      <Header />
+      <Switch>
+        <Route exact path='/profile' component={UserInfo} />
+        <Route exact path='/repos' component={RepoList}/>
+      </Switch>
     </div>
   )
 }

@@ -17,7 +17,7 @@ class UserInfoGet extends React.Component {
   render() {
     return(
       <div>
-        <button onClick={this.getMaxInfo}>Get Max's Info</button>
+        <h1 onClick={this.getMaxInfo} alt="Click Me">[ Max Scher: Web Development Portfolio ]</h1>
       </div>
     )
   }
