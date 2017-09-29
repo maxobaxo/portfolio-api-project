@@ -32,6 +32,7 @@ class MasterMax extends React.Component {
   getMaxInfo() {
     const { dispatch } = this.props;
     dispatch(getUserInfo());
+    this.getMaxRepos();
   }
 
   getMaxRepos() {
@@ -46,7 +47,7 @@ class MasterMax extends React.Component {
         <div hidden={this.showProfileInfo()}>
           <UserInfo profile={this.props.masterState.userInfo}/>
         </div>
-        <RepoList />
+        <RepoList repoList={this.props.masterState.userRepos}/>
       </div>
     )
   }

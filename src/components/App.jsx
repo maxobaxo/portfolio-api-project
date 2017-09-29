@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import RepoList from './RepoList';
+import Contact from './Contact';
 import MasterMax from './MasterMax';
 import { Switch, Route } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ function App(props) {
       <Header />
       <Switch>
         <Route exact path='/' component={ MasterMax } />
-        <Route path='/contact' component={ RepoList } />
+        <Route path='/contact' component={ Contact } />
       </Switch>
     </div>
   )

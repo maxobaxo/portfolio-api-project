@@ -1,6 +1,4 @@
 import React from 'react';
-import UserInfoGet from './UserInfoGet';
-import UserInfoDisplay from './UserInfoDisplay';
 import PropTypes from 'prop-types';
 
 function UserInfo(props) {
