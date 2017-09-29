@@ -8,7 +8,7 @@ import { Grid, Col, Row } from 'react-bootstrap';
 function App(props) {
 
   return(
-    <div className="container">
+    <div>
       <Header />
       <Switch>
         <Route exact path='/' component={ MasterMax } />

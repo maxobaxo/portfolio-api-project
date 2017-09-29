@@ -7,7 +7,7 @@ function Repo(props) {
   return(
     <div>
       <Accordion>
-        <Panel header={props.name}>
+        <Panel header={props.name} eventKey="1">
           <p>{props.description}</p>
           <li>Language: {props.language}</li>
           <li>Created: {props.created}</li>
