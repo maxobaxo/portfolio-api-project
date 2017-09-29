@@ -5,7 +5,8 @@ function Header() {
 
   return(
     <div>
-      <Link to='/repos'>Repositories</Link> | <Link to='/profile'>Profile</Link>
+      <h1>[ Max Scher: Web Development Portfolio ]</h1>
+      <Link to='/contact'>Repositories</Link> | <Link to='/'>Profile</Link>
     </div>
   )
 }
