@@ -1,12 +1,26 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { getUserInfo } from './../actions/index';
 
-function UserInfoGet(props) {
+class UserInfoGet extends React.Component {
 
-  return(
-    <div>
+  constructor(props) {
+    super(props);
+    this.getMaxInfo = this.getMaxInfo.bind(this);
+  }
 
-    </div>
-  )
+  getMaxInfo() {
+    const { dispatch } = this.props;
+    dispatch(getUserInfo());
+  }
+
+  render() {
+    return(
+      <div>
+        <button onClick={this.getMaxInfo}>Get Max's Info</button>
+      </div>
+    )
+  }
 }
 
-export default UserInfoGet;
+export default connect()(UserInfoGet);
