@@ -17,7 +17,6 @@ export const receiveUserInfo = (profile) => ({
 let encodedKeys = base64.encode(username + ':' + token);
 
 export function getUserInfo(dispatch) {
-  console.log(encodedKeys);
   return function(dispatch) {
     const localUserId = v4();
     dispatch(requestUserInfo(localUserId));
