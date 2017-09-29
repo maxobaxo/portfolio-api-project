@@ -1,17 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Accordion, Panel } from 'react-bootstrap';
 
 function Repo(props) {
 
   return(
     <div>
-      <ul>
-        <h4>{props.name}</h4>
-        <p>{props.description}</p>
-        <li>Language: {props.language}</li>
-        <li>Created: {props.created}</li>
-        <li>Updated: {props.updated}</li>
-      </ul>
+      <Accordion>
+        <Panel header={props.name}>
+          <p>{props.description}</p>
+          <li>Language: {props.language}</li>
+          <li>Created: {props.created}</li>
+          <li>Updated: {props.updated}</li>
+        </Panel>
+      </Accordion>
     </div>
   )
 }

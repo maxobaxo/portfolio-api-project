@@ -1,12 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Jumbotron } from 'react-bootstrap';
 
 function Header() {
 
   return(
     <div>
-      <h1>[ Max Scher: Web Development Portfolio ]</h1>
-      <Link to='/contact'>Contact</Link> | <Link to='/'>Profile</Link>
+      <Jumbotron>
+        <h1>[ Max Scher: Web Development Portfolio ]</h1>
+        <Link to='/contact'>Contact</Link> | <Link to='/'>Profile</Link>
+      </Jumbotron>
     </div>
   )
 }

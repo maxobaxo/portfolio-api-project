@@ -46,8 +46,9 @@ class MasterMax extends React.Component {
         <h2 hidden={this.hideProfileButton()} onClick={this.getMaxInfo}>cLiCk tO lOaD</h2>
         <div hidden={this.showProfileInfo()}>
           <UserInfo profile={this.props.masterState.userInfo}/>
+          <h3>Repositories</h3>
+          <RepoList repoList={this.props.masterState.userRepos}/>
         </div>
-        <RepoList repoList={this.props.masterState.userRepos}/>
       </div>
     )
   }
