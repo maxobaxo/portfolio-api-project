@@ -1,7 +1,7 @@
 import React from 'react';
 import UserInfo from './UserInfo';
 import RepoList from './RepoList';
-import { getUserInfo } from './../actions/index';
+import { getUserInfo } from './../actions/user-info';
 import { connect } from 'react-redux';
 
 class MasterMax extends React.Component {
@@ -29,7 +29,6 @@ class MasterMax extends React.Component {
       <div>
         <h2 hidden={this.hideProfileButton()} onClick={this.getMaxInfo}>cLiCk tO lOaD</h2>
         <UserInfo profile={this.props.masterState.userInfo}/>
-
       </div>
     )
   }
